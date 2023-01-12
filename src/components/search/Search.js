@@ -1,20 +1,9 @@
-import React from "react";
-import styles from "./Search.module.scss";
-import { BiSearch } from "react-icons/bi";
+import React from 'react'
 
-const Search = ({ value, onChange }) => {
+const Search = () => {
   return (
-    <div className={styles.search}>
-      <BiSearch size={18} className={styles.icon} />
+    <div>Search</div>
+  )
+}
 
-      <input
-        type="text"
-        placeholder="Search by name"
-        value={value}
-        onChange={onChange}
-      />
-    </div>
-  );
-};
-
-export default Search;
+export default Search
