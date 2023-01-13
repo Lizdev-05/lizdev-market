@@ -2,7 +2,8 @@ import React from "react";
 import { logo } from "./Logo";
 import styles from "./Header.module.scss";
 import { Link } from "react-router-dom";
-import { FaShoppingCart } from "react-icons/fa"
+
+import { cart } from "./Cart";
 
 const Header = () => {
   return (
@@ -25,6 +26,7 @@ const Header = () => {
                 <Link to='/register'>Register</Link>
                 <Link to='/order-history'>My orders</Link>
               </span>
+             { cart }
             </div>
           </nav>
         </div>
