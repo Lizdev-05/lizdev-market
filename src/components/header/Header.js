@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { logo } from "./Logo";
 import styles from "./Header.module.scss";
 import { Link } from "react-router-dom";
-
 import { cart } from "./Cart";
 
 const Header = () => {
+
+  const [show, setShow ] = useState(false);
+
+  const toggleNav = () => {
+       setShow(!show)
+  }
   return (
    
       <header>
