@@ -5,7 +5,7 @@ export const logo = (
     <div className={styles.logo}>
       <Link to="/">
         <h2>
-          lizdev<span>mall</span>{" "}
+          liz<span>mall</span>{" "}
         </h2>
       </Link>
     </div>

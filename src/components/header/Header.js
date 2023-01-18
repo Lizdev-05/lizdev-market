@@ -3,6 +3,7 @@ import { logo } from "./Logo";
 import styles from "./Header.module.scss";
 import { Link } from "react-router-dom";
 import { cart } from "./Cart";
+import {FaTimes} from "react-icons/fa"
 import {HiOutlineMenuAlt3} from "react-icons/hi"
 const Header = () => {
 
@@ -25,6 +26,10 @@ const Header = () => {
 
             </div>
             <ul onClick={hideMenu}>
+            <li className={styles['logo-mobile']}>
+            {logo}
+            <FaTimes size={22} color='#fff' onClick={hideMenu}/>
+              </li>
               <li>
                 <Link to='/'>Home</Link>
               </li>
@@ -32,7 +37,7 @@ const Header = () => {
                 <Link to='/contact'>Contact</Link>
               </li>
             </ul>
-            <div className={styles["header-right"]}>
+            <div className={styles["header-right"]} onClick={hideMenu}>
               <span className={styles.links}>
                 <Link to='/login'>Login</Link>
                 <Link to='/register'>Register</Link>

@@ -5,8 +5,8 @@ import styles from "./Header.module.scss";
 export const cart = (
     <span className={styles.cart}>
     <Link to='/carts'>
-      Carts 
-    <FaShoppingCart size={20}/>
+      Cart 
+    <FaShoppingCart size={20} />
      <p>0</p>
      </Link>
     </span>
