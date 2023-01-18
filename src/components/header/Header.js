@@ -3,20 +3,27 @@ import { logo } from "./Logo";
 import styles from "./Header.module.scss";
 import { Link } from "react-router-dom";
 import { cart } from "./Cart";
-
+import {HiOutlineMenuAlt3} from "react-icons/hi"
 const Header = () => {
 
-  const [show, setShow ] = useState(false);
+  const [showMenu, setShowMenu ] = useState(false);
 
   const toggleNav = () => {
-       setShow(!show)
+       setShowMenu(!showMenu)
+  }
+
+  const hidenav = () => {
+    showMenu(false)
   }
   return (
    
       <header>
         <div className={styles.header}>
           {logo}
-          <nav>
+          <nav className={showMenu ? `${styles['show-nav']}` : `${styles['hide-nav']}`}>
+            <div className={showMenu ? `${styles['nav-wrapper']} ${styles['show-nav-wrapper']}` : `${styles['nav-wrapper']}`}>
+
+            </div>
             <ul>
               <li>
                 <Link to='/'>Home</Link>
@@ -34,6 +41,11 @@ const Header = () => {
              { cart }
             </div>
           </nav>
+
+          <div className={styles['menu-icon']}>
+          { cart }
+          <HiOutlineMenuAlt3 />
+          </div>
         </div>
       </header>
 
