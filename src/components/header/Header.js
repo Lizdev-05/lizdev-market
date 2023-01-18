@@ -8,11 +8,11 @@ const Header = () => {
 
   const [showMenu, setShowMenu ] = useState(false);
 
-  const toggleNav = () => {
+  const toggleMenu = () => {
        setShowMenu(!showMenu)
   }
 
-  const hidenav = () => {
+  const hideMenu = () => {
     showMenu(false)
   }
   return (
@@ -44,7 +44,7 @@ const Header = () => {
 
           <div className={styles['menu-icon']}>
           { cart }
-          <HiOutlineMenuAlt3 />
+          <HiOutlineMenuAlt3 size={28} onClick={toggleMenu}/>
           </div>
         </div>
       </header>
