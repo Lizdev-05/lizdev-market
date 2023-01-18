@@ -24,7 +24,7 @@ const Header = () => {
             <div className={showMenu ? `${styles['nav-wrapper']} ${styles['show-nav-wrapper']}` : `${styles['nav-wrapper']}`} onClick={hideMenu}>
 
             </div>
-            <ul>
+            <ul onClick={hideMenu}>
               <li>
                 <Link to='/'>Home</Link>
               </li>
