@@ -1,19 +1,9 @@
-import React from "react";
-import Card from "../card/Card";
-import styles from "./InfoBox.module.scss";
+import React from 'react'
 
-const InfoBox = ({ cardClass, title, count, icon }) => {
+const InfoBox = () => {
   return (
-    <div className={styles["info-box"]}>
-      <Card cardClass={cardClass}>
-        <h4>{title}</h4>
-        <span>
-          <h3>{count}</h3>
-          {icon}
-        </span>
-      </Card>
-    </div>
-  );
-};
+    <div>InfoBox</div>
+  )
+}
 
-export default InfoBox;
+export default InfoBox
