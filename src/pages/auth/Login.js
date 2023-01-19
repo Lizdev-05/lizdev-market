@@ -1,5 +1,7 @@
 import React from 'react'
 import loginImg from '../../assets/login.png'
+import { Link } from 'react-router-dom';
+import {FaGoogle} from 'react-icons/fa'
 import styles from "./auth.module.scss";
 
 const Login = () => {
@@ -16,9 +18,15 @@ const Login = () => {
              <button className='--btn --btn-primary --btn-block'>
               Login
              </button>
-      
-          </form>
+             <div className={styles.links}>
+           <Link to="/reset" >Forgot Password</Link>
           </div>
+          <p>-- or --</p>
+          </form>
+          <button className='--btn --btn-danger --btn-block'> 
+          <FaGoogle color='#fff'/> Login With Google </button>
+          <span className={styles.register}><p>Don't have an account? <Link to='/register'>Register</Link></p></span>
+          </div> 
          
     </section>
   )
